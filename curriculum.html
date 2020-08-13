@@ -3,40 +3,27 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="format-detection" content="telephone=no">
-    <meta http-Equiv="Cache-Control" Content="no-cache" />
-    <meta http-Equiv="Pragma" Content="no-cache" />
-    <meta http-Equiv="Expires" Content="0" />
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <!-- ./fonts -->
 
-    <!-- css -->
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Slabo+27px';
+        @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400';
+    </style>
+
     <style type="text/css">
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
         }
 
         html {
-            height: 100%;
-        }
-
-        html[lang=nl] .sidebar {
-            padding-left: 15px;
-        }
-        html[lang=nl] .sidebar--label {
-            display: inline-block;
-            width: 100%;
-            max-width: 106px;
-            margin-top: -2px;
-        }
-        html[lang=nl] .sidebar--item-align-right {
-            display: inline-block;
-            margin-right: 10px;
-            width: 60px;
-            text-align: right;
+            height: 100%
         }
 
         body {
@@ -46,41 +33,40 @@
             position: relative;
             margin: 0;
             padding: 0 0;
-            color: #333333;
+            color: #333;
             line-height: 22px;
-         font: 12px "Source Sans Pro", Arial;
-                    font-style: normal;
+                    font: 13px "Source Sans Pro", Arial;
+                    font-style: normal
         }
 
         h1 {
-            font-style: normal;
-            font-size: 30px;
-            margin: 0 0 20px 0;
-            padding: 13px 0 15px 0;
-            font-weight: 600;
-            border-bottom: 1px solid #d2d2d2;
+         font: 30px "Slabo 27px", Arial;
+                    margin: 0;
+            padding: 25px 0 5px 0;
+            font-weight: 600
         }
+
         h1 span {
             position: relative;
             font-style: normal;
             display: inline;
             margin-right: 1px;
-            padding: 0;
+            padding: 0
         }
 
         h2 {
-            font-size: 17px;
-            font-weight: 600;
+         font: 16px "Slabo 27px", Arial;
+        
+        text-transform: uppercase;            font-weight: 700;
             margin: 0;
-            padding: 0;
+            padding: 0
         }
 
         h3 {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             margin: 0;
-            padding: 0;
-            max-width: 430px;
+            padding: 0
         }
 
         p {
@@ -88,8 +74,7 @@
             line-height: 18px;
             font-weight: 400;
             margin: 0;
-            padding: 0;
-            text-align: left;
+            padding: 0
         }
 
         hr {
@@ -98,73 +83,114 @@
             width: 100%;
             padding: 0;
             margin: 0;
-            background: #d2d2d2;
-        }
-
-        .section--first-name {
-            display: inline-block;
-        }
-
-        .section--last-name {
-            display: inline-block;
-            position: relative;
-            left: 5px;
+            background: #d2d2d2
         }
 
         .sections {
-            left: 235px;
+            left: 40px;
             position: relative;
-            width: 535px;
+            width: 715px
         }
 
         .section {
             position: relative;
             width: 100%;
-            padding: 0;
+            padding: 0
         }
+
         .section p {
             display: block;
-            font-style: normal;
+            font-style: normal
         }
+
         .section:last-child {
-            border: none;
+            border: none
         }
+
         .section.section--summary {
-            margin-top: -10px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #d2d2d2
+        }
+
+        .section.section--summary .section--content {
+            padding-top: 0;
+            padding-left: 0
+        }
+
+        .section--name {
+            position: relative
+        }
+
+        .section--name.has--avatar h1 {
+            padding-left: 70px
+        }
+
+        .section--avatar {
+            display: inline-block;
+            position: absolute;
+            top: 15px;
+            padding: 0;
+            margin: 0;
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            -webkit-background-size: cover !important;
+            background-size: cover !important
         }
 
         .section--title {
             display: block;
             position: relative;
             z-index: 99;
-            margin: 0 0 0 0;
-            font-weight: 600;
+            margin: 20px 0 0 0;
             background: #fff;
             padding: 15px 0 15px 0;
             page-break-inside: avoid;
-            border-bottom: 1px solid #d2d2d2;
+            border-top: 2px solid #d2d2d2
         }
+
         .section--title span {
             display: inline-block;
-            margin-right: 0px;
+            margin-right: 0
         }
 
         .section--heading-group {
             display: block;
-            padding: 15px 0 0 0;
-            margin: 0;
-            /*page-break-inside: avoid;*/
+            padding: 15px 0 0 150px;            margin: 0;
+            page-break-inside: avoid
         }
 
         .section--list {
             display: block;
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0
         }
-        .section--list.skills {
-            padding-top: 5px;
-            margin-bottom: 10px;
+
+        .section--list.no-indent .section--item .section--heading-group {
+            padding-left: 0
+        }
+
+        .section--list.no-indent .section--item .section--content {
+            padding-left: 0
+        }
+
+        .section--list.section--list-skills .section--sub-heading {
+            padding-top: 0;
+            max-width: 120px;
+            text-align: right;
+            font-style: normal
+        }
+
+        .section--list.section--list-skills .section--heading-group {
+            padding-left: 0
+        }
+
+        .section--list.section--list-skills .section--date {
+            left: 150px;
+            text-align: left;
+            font-weight: 700
         }
 
         .section--item {
@@ -172,27 +198,21 @@
             position: relative;
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0
         }
-        .section--item.skills {
-            display: inline-block;
-            padding-top: 8px;
-            padding-bottom: 0;
-            width: 100%;
-            margin: 0;
-            padding-left: 5px;
+
+        .section--item:first-child .section--heading-group {
+            padding-top: 0
         }
-        .section--item.skills h3 {
-            font-size: 13px;
-        }
-        .section--item.skills:last-child {
-            padding-bottom: 0;
+
+        .section--item:first-child .section--heading-group .section--date {
+            top: 0
         }
 
         .skills--label {
             display: inline-block;
             width: 175px;
-            margin: 5px 0 0 -5px;
+            margin: 5px 0 0 -5px
         }
 
         .skills--level {
@@ -204,7 +224,7 @@
             padding: 0;
             margin: 0;
             background: #eaeaea;
-            border-radius: 6px;
+            border-radius: 6px
         }
 
         .skills--level-filler {
@@ -213,36 +233,37 @@
             left: 0;
             height: 100%;
             background: #b1b1b1;
-            border-radius: 6px;
+            border-radius: 6px
         }
 
         .skills--stars {
             display: inline-block;
             position: relative;
-            top: 4px;
+            top: 4px
         }
+
         .skills--stars svg {
-            fill: #b1b1b1;
+            fill: #b1b1b1
         }
+
         .skills--stars svg.active {
-            fill: #2b2b38;
+            fill: #2b2b38
         }
 
         .section--date {
             position: absolute;
-            right: 0;
+            left: 0;
             text-align: right;
-            top: 16px;
-            width: 125px;
-             width: 125px;            font-size: 13px;
+            top: 15px;
+         width: 120px;            font-size: 13px;
             padding: 0;
-            margin: 0;
+            margin: 0
         }
 
         .section--heading {
             display: block;
             padding: 0;
-            margin: 0;
+            margin: 0
         }
 
         .section--sub-heading {
@@ -250,315 +271,230 @@
             padding: 3px 0 0 0;
             margin: 0;
             font-style: italic;
-            font-size: 13px;
+            font-size: 13px
         }
 
         .section--content {
             display: block;
-            padding: 5px 0 0 0;
-            margin: 0;
+            padding: 5px 0 0 150px;            margin: 0
         }
+
         .section--content p {
-            display: block;
+            display: block
         }
-        .section--content ul, .section--content ol {
+
+        .section--content ol, .section--content ul {
             white-space: normal;
             font-weight: 400;
             list-style-position: outside;
             color: #4c4c4c;
             margin: 0;
-            padding: 0 0 0 16px;
-            text-align: left;
+            padding: 0 0 0 16px
         }
-        .section--content ul li, .section--content ol li {
-            line-height: 18px;
+
+        .section--content ol li, .section--content ul li {
+            line-height: 18px
         }
-        .section--content ul li strong, .section--content ol li strong {
-            display: inline-block;
-            text-align: left;
-        }
+
         .section--content ul li {
-            list-style-type: disc;
+            list-style-type: disc
         }
+
         .section--content ol {
-            padding-left: 14px;
+            padding-left: 14px
         }
 
         .section--content-single-textarea {
-            padding-top: 10px;
+            padding-left: 0
         }
 
-        .sidebar--bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 215px;
-            background: #2b2b38;
-            height: 18000px;
-            overflow-x: hidden;
-            overflow-y: hidden;
+        .c--333333 h1, .c--333333 h2 {
+            color: #333 !important
         }
 
-        .sidebar {
-            left: 0;
-            overflow: hidden;
-            position: absolute;
-            color: #fff;
-            padding: 29px 0 0 20px;
-            width: 215px;
-            height: auto;
-        }
-        .sidebar.sidebar--no-avatar {
-            padding-top: 16px;
+        .c--da4453 h1, .c--da4453 h2 {
+            color: #da4453 !important
         }
 
-        .avatar {
-            display: inline-block;
-            padding: 0;
-            margin: 0 0 0 9px;
-            height: 155px;
-            width: 155px;
-            border-radius: 50%;
-            background-size: cover !important;
+        .c--3f6592 h1, .c--3f6592 h2 {
+            color: #3f6592 !important
         }
 
-        .sidebar--data {
-            display: block;
+        .c--82652b h1, .c--82652b h2 {
+            color: #82652b !important
         }
 
-        .sidebar--title {
-            font-size: 15px;
-            font-style: normal;
-            padding: 20px 0 11px 0;
-            margin: 0 0 10px 0;
-            page-break-inside: avoid;
-            border-bottom: 1px solid #fff;
+        .c--37bc9b h1, .c--37bc9b h2 {
+            color: #37bc9b !important
         }
-        .sidebar--title span {
-            font-weight: 400;
-            font-style: normal;
-            margin-right: 0px;
-        }
-
-        .sidebar--title svg {
-            position: relative;
-            top: 4px;
-            margin-right: 4px;
-        }
-
-        .sidebar--label {
-            font-weight: 600;
-        }
-
-        .sidebar--list {
-            display: block;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .sidebar--item {
-            display: block;
-            list-style: none;
-            font-size: 12px;
-            margin: 0;
-            page-break-inside: avoid;
-            padding: 8px 5px 0 0;
-        }
-        .sidebar--item:last-child {
-            padding-bottom: 0;
-        }
-
-        .sidebar--item-text {
-            line-height: 21px;
-        }
-
-        .sidebar--item-align-right {
-            float: right;
-            margin-right: 20px;
-        }
-
-        .c--434a54 .sidebar--bg, .c--434a54 .skills--level-filler {
-            background: #434a54 !important;
-        }
-
-        .c--efa100 .sidebar--bg, .c--efa100 .skills--level-filler {
-            background: #efa100 !important;
-        }
-
-        .c--3f6592 .sidebar--bg, .c--3f6592 .skills--level-filler {
-            background: #3f6592 !important;
-        }
-
-        .c--d770ad .sidebar--bg, .c--d770ad .skills--level-filler {
-            background: #d770ad !important;
-        }
-
-        .c--da4453 .sidebar--bg, .c--da4453 .skills--level-filler {
-            background: #da4453 !important;
-        }
-
-        strong { white-space: nowrap; }
 
     </style>
-    <!-- ./css -->
+
 
 </head>
-<body class="c--434a54" style="overflow: hidden !important;">
-
-<div class="sidebar--bg"></div>
-
-<aside class="sidebar  sidebar--no-avatar">
-
-    
-
-    <div class="sidebar--data">
-        <h2 class="sidebar--title">
-            Personal
-        </h2>
-
-        <ul class="sidebar--list">
-            <li class="sidebar--item">
-                <span class="sidebar--label">Nombre</span><br>
-                                    sofia fernanda soto quevedo
-                            </li>
-
-
-                        <li class="sidebar--item">
-                <span class="sidebar--label">Dirección</span><br>
-                pasaje 2 6424                <br/>
-                                    santiago
-                            </li>
-            
-
-                            <li class="sidebar--item">
-                    <span class="sidebar--label">Número de teléfono</span><br>
-                    +56935031744
-                </li>
-            
-
-            <li class="sidebar--item">
-                <span class="sidebar--label">Correo electrónico</span><br>
-                sotoquevedosofia@gmail.com
-            </li>
-
-                            <li class="sidebar--item">
-                    <span class="sidebar--label">Fecha de nacimiento</span><br>
-                                            04-11-2000
-                                    </li>
-            
-            
-                            <li class="sidebar--item">
-                    <span class="sidebar--label">Género</span><br>
-                                            Mujer
-                                    </li>
-            
-                            <li class="sidebar--item">
-                    <span class="sidebar--label">Nacionalidad</span><br>
-                    chilena
-                </li>
-            
-            
-
-            
-            
-                    </ul>
-
-    </div>
-
-    
-
-        
-    
-
-        
-    
-
-        
-    
-
-        
-            
-
-        
-    
-
-        
-            
-        
-    
-
-        
-
-                    
-    
-
-        
-    
-
-        
-    
-
-        
-    
-
-        
-    
-</aside>
+<body  class="c--333333"  style="overflow: hidden !important;">
 
 <section class="sections">
 
-    <div class="section--name">
-        <h1>
-                            sofia fernanda soto quevedo
-                    </h1>
+    <div class="section--name  ">
+
+        
+        <h1>Curriculum Vitae</h1>
     </div>
 
-    
-        
-            
-                <div class="section" >
 
-                    <div class="section--title" >
-                        <h2>
-                            Experiencia laboral
-                        </h2>
+    <div class="section">
+        <div class="section--title">
+            <h2>
+                Personal
+            </h2>
+        </div>
+
+        <ol class="section--list">
+            <li class="section--item">
+                <div class="section--heading-group">
+                    <div class="section--date">
+                        Nombre
                     </div>
-
-                    <div class="section--time-line-overlay"></div>
-
-                    <ol class="section--list">
-                                                    <li class="section--item">
-                                <div class="section--heading-group">
-                                    <div class="section--date">dic 2019 - abr 2020</div>
-                                    <div class="section--heading">
-                                        <h3>administrativo</h3>
-                                    </div>
-                                    <div class="section--sub-heading">
-                                        consultorio haydee lopez, santiago                                    </div>
-                                </div>
-                                                            </li>
-                                            </ol>
+                    <div class="section--heading">
+                        <h3>
+                                                            sofia fernanda soto quevedo
+                                                    </h3>
+                    </div>
                 </div>
-            
-        
+            </li>
 
-    
-        
-
-    
-        
-            
-                <div class="section" >
-
-                    <div class="section--title" >
-                        <h2>
-                            Estudios y certificaciones
-                        </h2>
+                        <li class="section--item">
+                <div class="section--heading-group">
+                    <div class="section--date">
+                        Dirección
                     </div>
+                    <div class="section--heading">
+                        <h3>pasaje 2 6424,                                                            santiago
+                            </h3>
+                    </div>
+                </div>
+            </li>
+            
+                        <li class="section--item">
+                <div class="section--heading-group">
+                    <div class="section--date">
+                        Número de teléfono
+                    </div>
+                    <div class="section--heading">
+                        <h3>+56935031744</h3>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="section--item">
+                <div class="section--heading-group">
+                    <div class="section--date">
+                        Correo electrónico
+                    </div>
+                    <div class="section--heading">
+                        <h3>sotoquevedosofia@gmail.com</h3>
+                    </div>
+                </div>
+            </li>
 
-                    <ol class="section--list no-indent">
-                        
+            
+                <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Fecha de nacimiento
+                        </div>
+                        <div class="section--heading">
+                            <h3>
+                                                                    04-11-2000
+                                                            </h3>
+                        </div>
+                    </div>
+                </li>
+            
+
+            
+            
+                <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Género
+                        </div>
+                        <div class="section--heading">
+                            <h3>                                    Mujer
+                                </h3>
+                        </div>
+                    </div>
+                </li>
+            
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Nacionalidad
+                        </div>
+                        <div class="section--heading">
+                            <h3>chilena</h3>
+                        </div>
+                    </div>
+                </li>
+            
+
+
+            
+
+            
+            
+            
+
+        </ol>
+
+    </div>
+
+
+
+    
+        
+            <div class="section" >
+
+                <div class="section--title" >
+                    <h2>
+                        Experiencia laboral
+                    </h2>
+                </div>
+
+
+                <ol class="section--list">
+                                            <li class="section--item">
+                            <div class="section--heading-group">
+                                <div class="section--date">dic 2019 - abr 2020</div>
+                                <div class="section--heading">
+                                    <h3>administrativo</h3>
+                                </div>
+                                <div class="section--sub-heading">
+                                    consultorio haydee lopez, santiago                                </div>
+                            </div>
+                                                    </li>
+                                    </ol>
+            </div>
+        
+    
+
+
+    
+
+
+    
+        
+            <div class="section" >
+
+                <div class="section--title" >
+                    <h2>
+                        Estudios y certificaciones
+                    </h2>
+                </div>
+
+                <ol class="section--list no-indent">
+                    
                         <li class="section--item">
                             <div class="section--heading-group">
                                 <div class="section--date">
@@ -569,48 +505,50 @@
                                 </div>
                                 <div class="section--sub-heading">
                                     instito miguel leon prado                                </div>
+                            </div>
+                                                    </li>
+                                    </ol>
 
-                                                            </div>
-                        </li>
-                                            </ol>
+            </div>
+        
+    
 
-                </div>
+
+    
+
+        
+    
+
+
+    
             
         
 
+
     
-        
             
         
 
+
     
         
-            
-        
+    
+
 
     
         
 
     
-        
-            
-        
+
+
+    
+
 
     
         
-            
-
-        
-
     
-        
 
-    
-        
-            
-        
 
-    
 
 </section>
 
